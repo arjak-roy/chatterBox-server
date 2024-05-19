@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 const e = require("express");
 var mongoose = require("mongoose");
 // const uri = "mongodb+srv://Arjak_real:So5EGCgjvQanIqgn@cluster0.crakkng.mongodb.net/ChatterBox";
 mongoose.connect(process.env.MONGODB_URI).then(() => console.log(`Connected to MongoDB+${process.env.MONGODB_URI}`)); // Improved connection handling
-=======
-var mongoose = require("mongoose");
-
-mongoose.connect("mongodb://localhost:27017/ChatterBox").then(() => console.log("Connected to MongoDB")); // Improved connection handling
->>>>>>> 5a1c293 (second commit)
 
 var contact = new mongoose.Schema({
   name: {
