@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
-const uri = "mongodb://localhost:27017/Chatterbox";
+const uri = "mongodb+srv://Arjak_real:So5EGCgjvQanIqgn@cluster0.crakkng.mongodb.net/ChatterBox";
 
-mongoose.createConnection(process.env.MONGODB_UR);
+mongoose.createConnection(process.env.MONGODB_URI);
 
 var socketId = mongoose.Schema({
     socketId: {
