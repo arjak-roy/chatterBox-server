@@ -40,10 +40,12 @@ exports.socketController = () => {
                         messsage : datafromclient.messsage,
                         sender : datafromclient.sender,
                         receiver : datafromclient.receiver,
-                        time : datafromclient.time
+                        time : datafromclient.time,
+                        iV : datafromclient.iV //the public key
                     };
                     socket.to(socketIdOfReceiver).emit("chatmsg",{data: dataToReciever});
                     console.log(`${dataToReciever.sender} (socketID: ${socket.id}) sent a message to ${dataToReciever.receiver}(socketId: ${socketIdOfReceiver})`);
+                    console.log(dataToReciever);
                 } catch (error) {
                     console.log(error);
                 }

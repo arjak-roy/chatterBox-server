@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const uri = "mongodb+srv://Arjak_real:Nandini@cluster0.crakkng.mongodb.net/ChatterBox";
+const uri = "mongodb://localhost:27017/Chatterbox";
 
 mongoose.createConnection(process.env.MONGODB_UR);
 
