@@ -1,7 +1,7 @@
 const e = require("express");
 var mongoose = require("mongoose");
 const uri = "mongodb://localhost:27017/Chatterbox";
-mongoose.connect(uri).then(() => console.log("Connected to MongoDB")); // Improved connection handling
+mongoose.connect(process.env.MONGODB_URI).then(() => console.log("Connected to MongoDB")); // Improved connection handling
 
 var contact = new mongoose.Schema({
   name: {
